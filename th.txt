@@ -1,0 +1,7 @@
+passing data bw components
+props
+context api
+redux
+
+parent components  --> immidiate child components
+props drilling

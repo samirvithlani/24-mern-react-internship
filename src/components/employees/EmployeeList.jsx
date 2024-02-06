@@ -5,6 +5,7 @@ export const EmployeeList = (props) => {
   return (
     <div>
         <h1>LIST OF EMPLOYEE</h1>
+        <h2>TITLE FROM APP -- {props.title}</h2>
         {
             props.employeeList.map((emp)=>{
                 return(
@@ -15,6 +16,10 @@ export const EmployeeList = (props) => {
                 )
             })
         }
+        <button onClick={()=>{
+            props.test()
+        }}>TEST IN CHILD</button>
+
     </div>
   )
 }

@@ -4,6 +4,7 @@ import { Home } from "./components/Home";
 import Header from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Employees } from "./components/employees/Employees";
+import { UseStateDemo } from "./components/UseStateDemo";
 
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
 
   return (
     <div className="App">
-      <Employees title = {title} employee = {employee}/>
+      <UseStateDemo/>
+      {/* <Employees title = {title} employee = {employee}/> */}
       {/* <Header/>
       <Home/>
       <Footer/>   */}

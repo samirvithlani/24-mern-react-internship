@@ -2,6 +2,11 @@ import React from "react";
 import { EmployeeList } from "./EmployeeList";
 
 export const Employees = (props) => {
+
+  function test() {
+    alert("test function");
+  }
+
   console.log("employees.....props", props);
   console.log(props.title);
 
@@ -26,7 +31,11 @@ export const Employees = (props) => {
       <h2>{props.employee.name}</h2>
       <h3>{props.employee.age}</h3>
 
-        <EmployeeList employeeList = {employeeList}/>
+      <button onClick={()=>{
+        test()
+      }}>TEST</button>
+
+      <EmployeeList employeeList={employeeList} title={props.title} test ={test}/>
 
       {/* <h2>{employeeList[0].name}</h2>
     <h2>{employeeList[1].name}</h2> */}

@@ -4,4 +4,10 @@ context api
 redux
 
 parent components  --> immidiate child components
-props drilling
+props drilling --> app --> Employees -->tile --> EmployeeList
+
+useState ---> hook --> functional components
+
+DOM  --> copy  ->vdom
+-->object -->state --> useSatate -->
+virtual dom -->

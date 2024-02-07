@@ -11,3 +11,16 @@ useState ---> hook --> functional components
 DOM  --> copy  ->vdom
 -->object -->state --> useSatate -->
 virtual dom -->
+
+
+
+user --> comp ->UserCommponent --> child[] --> userList
+
+userArray [] --> user
+child props ---> userList --> itrate --> Deelete
+
+
+react routing --->1 page --> 2 page -->
+react-router-dom v6
+<BrowserRouter>
+<Routes>

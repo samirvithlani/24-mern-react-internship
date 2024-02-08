@@ -15,6 +15,7 @@ import { ThrillerMovie } from "./components/netflix/ThrillerMovie";
 import { ActionMovie } from "./components/netflix/ActionMovie";
 import { NetflixShowsDetail } from "./components/netflix/NetflixShowsDetail";
 import { Error404 } from "./components/Error404";
+import { ApiDemo1 } from "./components/api/ApiDemo1";
 
 function App() {
   var title = "Employee Application";
@@ -28,15 +29,22 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path ="/" element ={<Home/>}></Route>
+        <Route path="/" element={<Home />}></Route>
         <Route path="/netflix/home" element={<NetflixHome />}></Route>
         <Route path="/netflix/movies" element={<NetflixMovies />}></Route>
         <Route path="/netflix/shows" element={<NetflixShows />}></Route>
-        <Route path = "/netflix/movies/thriller" element = {<ThrillerMovie/>}></Route>
-        <Route path ="/netflix/movies/action" element ={<ActionMovie/>}></Route>
-        <Route path ="/netflix/shows/detail/:id" element = {<NetflixShowsDetail/>}></Route>
+        <Route
+          path="/netflix/movies/thriller"
+          element={<ThrillerMovie />}
+        ></Route>
+        <Route path="/netflix/movies/action" element={<ActionMovie />}></Route>
+        <Route
+          path="/netflix/shows/detail/:id"
+          element={<NetflixShowsDetail />}
+        ></Route>
+        <Route path = "/apidemo1" element ={<ApiDemo1/>}></Route>
         {/* <Route path ="/*" element = {<h1>404</h1>}></Route> */}
-        <Route path = "/*" element = {<Error404/>}></Route>
+        <Route path="/*" element={<Error404 />}></Route>
       </Routes>
 
       {/* <UserComponent/> */}

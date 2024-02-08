@@ -38,9 +38,9 @@ export const Navbar = () => {
               </Link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                Link
-              </a>
+              <Link class="nav-link" to="/apidemo1">
+              apidemo1
+              </Link>
             </li>
           </ul>
         </div>

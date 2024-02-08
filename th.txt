@@ -24,3 +24,9 @@ react routing --->1 page --> 2 page -->
 react-router-dom v6
 <BrowserRouter>
 <Routes>
+
+PRODUCe -->
+consume ->
+
+fetch()
+axios

@@ -18,6 +18,8 @@ import { Error404 } from "./components/Error404";
 import { ApiDemo1 } from "./components/api/ApiDemo1";
 import { UseEffectDemo } from "./components/UseEffectDemo";
 import { ApiDemo2 } from "./components/api/ApiDemo2";
+import { ApiDemo3 } from "./components/api/ApiDemo3";
+import { ApiDemo4 } from "./components/api/ApiDemo4";
 
 function App() {
   var title = "Employee Application";
@@ -44,12 +46,15 @@ function App() {
           path="/netflix/shows/detail/:id"
           element={<NetflixShowsDetail />}
         ></Route>
-        <Route path = "/apidemo1" element ={<ApiDemo1/>}></Route>
-        <Route path = "/useeffectdemo"  element = {<UseEffectDemo/>}></Route>
-        <Route path = "/apidemo2" element = {<ApiDemo2/>}></Route>
+        <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
+        <Route path="/useeffectdemo" element={<UseEffectDemo />}></Route>
+        <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
+        <Route path="/apidemo3" element={<ApiDemo3 />}></Route>
+
+        <Route path="/apidemo4" element={<ApiDemo4 />}></Route>
+
         {/* <Route path ="/*" element = {<h1>404</h1>}></Route> */}
         <Route path="/*" element={<Error404 />}></Route>
-        
       </Routes>
 
       {/* <UserComponent/> */}

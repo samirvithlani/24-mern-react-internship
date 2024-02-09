@@ -1,8 +1,16 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export const ApiDemo1 = () => {
   const [users, setusers] = useState([]);
+
+  useEffect(() => {
+    
+    getApiData();
+  
+  }, [])
+  
+
   const getApiData = async () => {
     const res = await axios.get("https://node5.onrender.com/user/user");
     console.log(res);
@@ -16,14 +24,6 @@ export const ApiDemo1 = () => {
   return (
     <div>
       <h1>API DEMO 1</h1>
-      <button
-        onClick={() => {
-          getApiData();
-        }}
-      >
-        GET API
-      </button>
-
       {users.map((u) => {
         return (
           <div>

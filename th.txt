@@ -30,3 +30,9 @@ consume ->
 
 fetch()
 axios
+
+useForm
+Formkik
+
+useEffect : --> lifecycle method [hook]
+:to handle side effects

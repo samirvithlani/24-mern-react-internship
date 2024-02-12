@@ -20,6 +20,9 @@ import { UseEffectDemo } from "./components/UseEffectDemo";
 import { ApiDemo2 } from "./components/api/ApiDemo2";
 import { ApiDemo3 } from "./components/api/ApiDemo3";
 import { ApiDemo4 } from "./components/api/ApiDemo4";
+import { UserForm } from "./components/forms/UserForm";
+import { UserRegForm } from "./components/forms/UserRegForm";
+import { AddUserForm } from "./components/forms/AddUserForm";
 
 function App() {
   var title = "Employee Application";
@@ -50,8 +53,8 @@ function App() {
         <Route path="/useeffectdemo" element={<UseEffectDemo />}></Route>
         <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
         <Route path="/apidemo3" element={<ApiDemo3 />}></Route>
-
         <Route path="/apidemo4" element={<ApiDemo4 />}></Route>
+        <Route path = "/userform" element = {<AddUserForm/>}></Route>
 
         {/* <Route path ="/*" element = {<h1>404</h1>}></Route> */}
         <Route path="/*" element={<Error404 />}></Route>

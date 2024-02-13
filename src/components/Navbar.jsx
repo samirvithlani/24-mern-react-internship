@@ -71,6 +71,12 @@ export const Navbar = () => {
               userform
               </Link>
             </li>
+            
+            <li class="nav-item">
+              <Link class="nav-link" to="/updateuser">
+              updateuser
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

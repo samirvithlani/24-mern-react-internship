@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const ApiDemo1 = () => {
   const [users, setusers] = useState([]);
@@ -69,6 +70,7 @@ export const ApiDemo1 = () => {
                 <td>{user.isActive == true ? "Active":"Not Active"}</td>
                 <td>
                   <button className="btn btn-danger" onClick={()=>{deleteUser(user._id)}}>DELETE</button>
+                  <Link to ={`/updateuser/${user._id}`} className="btn btn-primary">UPDATE</Link>
                 </td>
               </tr>)
             })

@@ -24,6 +24,7 @@ import { UserForm } from "./components/forms/UserForm";
 import { UserRegForm } from "./components/forms/UserRegForm";
 import { AddUserForm } from "./components/forms/AddUserForm";
 import { UpdateUser } from "./components/api/UpdateUser";
+import { LoginEmployee } from "./components/LoginEmployee";
 
 function App() {
   var title = "Employee Application";
@@ -57,6 +58,7 @@ function App() {
         <Route path="/apidemo4" element={<ApiDemo4 />}></Route>
         <Route path = "/userform" element = {<AddUserForm/>}></Route>
         <Route path = "/updateuser/:id"element = {<UpdateUser/>}></Route>
+        <Route path = "/login" element = {<LoginEmployee/>}></Route>
 
         {/* <Route path ="/*" element = {<h1>404</h1>}></Route> */}
         <Route path="/*" element={<Error404 />}></Route>

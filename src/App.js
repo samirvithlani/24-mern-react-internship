@@ -25,6 +25,8 @@ import { UserRegForm } from "./components/forms/UserRegForm";
 import { AddUserForm } from "./components/forms/AddUserForm";
 import { UpdateUser } from "./components/api/UpdateUser";
 import { LoginEmployee } from "./components/LoginEmployee";
+import { Sidebar } from "./components/Sidebar";
+import { Navbar1 } from "./components/Navbar1";
 
 function App() {
   var title = "Employee Application";
@@ -35,34 +37,43 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/netflix/home" element={<NetflixHome />}></Route>
-        <Route path="/netflix/movies" element={<NetflixMovies />}></Route>
-        <Route path="/netflix/shows" element={<NetflixShows />}></Route>
-        <Route
-          path="/netflix/movies/thriller"
-          element={<ThrillerMovie />}
-        ></Route>
-        <Route path="/netflix/movies/action" element={<ActionMovie />}></Route>
-        <Route
-          path="/netflix/shows/detail/:id"
-          element={<NetflixShowsDetail />}
-        ></Route>
-        <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
-        <Route path="/useeffectdemo" element={<UseEffectDemo />}></Route>
-        <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
-        <Route path="/apidemo3" element={<ApiDemo3 />}></Route>
-        <Route path="/apidemo4" element={<ApiDemo4 />}></Route>
-        <Route path = "/userform" element = {<AddUserForm/>}></Route>
-        <Route path = "/updateuser/:id"element = {<UpdateUser/>}></Route>
-        <Route path = "/login" element = {<LoginEmployee/>}></Route>
+    <body className="g-sidenav-show  bg-gray-100">
+      <div class="min-height-300 bg-primary position-absolute w-100"></div>
+      <Sidebar />
+      <main class="main-content position-relative border-radius-lg ps">
+        <Navbar1 />
+        <div className="container-fluid py-4">
+          <Routes>
+            {/* <Route path="/" element={<Home />}></Route> */}
+            <Route path="/netflix/home" element={<NetflixHome />}></Route>
+            <Route path="/netflix/movies" element={<NetflixMovies />}></Route>
+            <Route path="/netflix/shows" element={<NetflixShows />}></Route>
+            <Route
+              path="/netflix/movies/thriller"
+              element={<ThrillerMovie />}
+            ></Route>
+            <Route
+              path="/netflix/movies/action"
+              element={<ActionMovie />}
+            ></Route>
+            <Route
+              path="/netflix/shows/detail/:id"
+              element={<NetflixShowsDetail />}
+            ></Route>
+            <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
+            <Route path="/useeffectdemo" element={<UseEffectDemo />}></Route>
+            <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
+            <Route path="/apidemo3" element={<ApiDemo3 />}></Route>
+            <Route path="/apidemo4" element={<ApiDemo4 />}></Route>
+            <Route path="/userform" element={<AddUserForm />}></Route>
+            <Route path="/updateuser/:id" element={<UpdateUser />}></Route>
+            <Route path="/login" element={<LoginEmployee />}></Route>
 
-        {/* <Route path ="/*" element = {<h1>404</h1>}></Route> */}
-        <Route path="/*" element={<Error404 />}></Route>
-      </Routes>
+            {/* <Route path ="/*" element = {<h1>404</h1>}></Route> */}
+            <Route path="/*" element={<Error404 />}></Route>
+          </Routes>
+        </div>
+      </main>
 
       {/* <UserComponent/> */}
       {/* <UseStateDemo/> */}
@@ -70,7 +81,7 @@ function App() {
       {/* <Header/>
       <Home/>
       <Footer/>   */}
-    </div>
+    </body>
   );
 }
 

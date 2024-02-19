@@ -27,6 +27,10 @@ import { UpdateUser } from "./components/api/UpdateUser";
 import { LoginEmployee } from "./components/LoginEmployee";
 import { Sidebar } from "./components/Sidebar";
 import { Navbar1 } from "./components/Navbar1";
+import { ServiceProciderDashboard } from "./components/serviceprovider/ServiceProciderDashboard";
+import { UserDashboard } from "./components/user/UserDashboard";
+import { AddService } from "./components/serviceprovider/AddService";
+import { DyanmicSidebar } from "./components/DyanmicSidebar";
 
 function App() {
   var title = "Employee Application";
@@ -35,19 +39,33 @@ function App() {
     name: "John",
     age: 25,
   };
+  
+  const path = window.location.pathname;
+  console.log("Path: " + path);
 
   return (
     <body className="g-sidenav-show  bg-gray-100">
       <div class="min-height-300 bg-primary position-absolute w-100"></div>
-      <Sidebar />
+      {
+        path === "/login"  || path ==="/"? "" :
+        <Sidebar />
+      }
       <main class="main-content position-relative border-radius-lg ps">
-        <Navbar1 />
-        <div className="container-fluid py-4">
+        { 
+          path === "/login" ||  path ==="/" ?  "" :
+          <Navbar1 />
+        }
+        
           <Routes>
             {/* <Route path="/" element={<Home />}></Route> */}
+            <Route path ="/" element ={<LoginEmployee/>}></Route>
+            <Route path = "/serviceprovider" element = {<ServiceProciderDashboard/>}></Route>
+            <Route path  ="/serviceprovider/addservice" element = {<AddService/>}></Route>
+            <Route path = "/userdashboard" element = {<UserDashboard/>}></Route>
             <Route path="/netflix/home" element={<NetflixHome />}></Route>
             <Route path="/netflix/movies" element={<NetflixMovies />}></Route>
             <Route path="/netflix/shows" element={<NetflixShows />}></Route>
+            <Route path ="/dynamicSiderbar" element = {<DyanmicSidebar/>}></Route>
             <Route
               path="/netflix/movies/thriller"
               element={<ThrillerMovie />}
@@ -72,7 +90,7 @@ function App() {
             {/* <Route path ="/*" element = {<h1>404</h1>}></Route> */}
             <Route path="/*" element={<Error404 />}></Route>
           </Routes>
-        </div>
+        
       </main>
 
       {/* <UserComponent/> */}

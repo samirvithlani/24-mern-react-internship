@@ -1,7 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
+  const state = useSelector((state)=>state.cart.items)
+  const bankState = useSelector((state)=>state.bank.balance)
+  console.log("bankState in navbar..",bankState)
+  console.log("state in navbar..",state)
+
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -78,9 +84,28 @@ export const Navbar = () => {
               </Link>
             </li>
             <li class="nav-item">
+              <Link class="nav-link" to="/products">
+              products
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/bank">
+              bank
+              </Link>
+            </li>
+            <li class="nav-item">
               <Link class="nav-link" to="/login">
               login
               </Link>
+            </li>
+            <li class="nav-item">
+              <h2>Cart :
+              {
+                state?.length
+              }</h2>
+              <h3>
+                balance: {bankState}
+              </h3>
             </li>
           </ul>
         </div>

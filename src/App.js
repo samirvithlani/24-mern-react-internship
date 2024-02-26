@@ -31,6 +31,8 @@ import { ServiceProciderDashboard } from "./components/serviceprovider/ServicePr
 import { UserDashboard } from "./components/user/UserDashboard";
 import { AddService } from "./components/serviceprovider/AddService";
 import { DyanmicSidebar } from "./components/DyanmicSidebar";
+import { Products } from "./components/Products";
+import { BankComponent } from "./components/BankComponent";
 
 function App() {
   var title = "Employee Application";
@@ -44,17 +46,9 @@ function App() {
   console.log("Path: " + path);
 
   return (
-    <body className="g-sidenav-show  bg-gray-100">
-      <div class="min-height-300 bg-primary position-absolute w-100"></div>
-      {
-        path === "/login"  || path ==="/"? "" :
-        <Sidebar />
-      }
-      <main class="main-content position-relative border-radius-lg ps">
-        { 
-          path === "/login" ||  path ==="/" ?  "" :
-          <Navbar1 />
-        }
+    <body >
+      <div ></div>
+        <Navbar/>
         
           <Routes>
             {/* <Route path="/" element={<Home />}></Route> */}
@@ -66,6 +60,8 @@ function App() {
             <Route path="/netflix/movies" element={<NetflixMovies />}></Route>
             <Route path="/netflix/shows" element={<NetflixShows />}></Route>
             <Route path ="/dynamicSiderbar" element = {<DyanmicSidebar/>}></Route>
+            <Route path = "/products" element = {<Products/>}></Route>
+            <Route path = "/bank" element = {<BankComponent/>}></Route>
             <Route
               path="/netflix/movies/thriller"
               element={<ThrillerMovie />}
@@ -91,7 +87,7 @@ function App() {
             <Route path="/*" element={<Error404 />}></Route>
           </Routes>
         
-      </main>
+      {/* </main> */}
 
       {/* <UserComponent/> */}
       {/* <UseStateDemo/> */}

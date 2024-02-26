@@ -3,6 +3,10 @@ props
 context api
 redux
 
+
+redux ---> 2 components
+
+
 parent components  --> immidiate child components
 props drilling --> app --> Employees -->tile --> EmployeeList
 

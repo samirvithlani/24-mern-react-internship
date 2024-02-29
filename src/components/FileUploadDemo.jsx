@@ -1,10 +1,27 @@
 import axios from 'axios';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
 
 export const FileUploadDemo = () => {
 
     const {register, handleSubmit} = useForm();
+
+    const [services, setservices] = useState([])
+    const getService = async () => {
+
+        const res = await axios.get("http://localhost:4000/upload/allService");
+        setservices(res.data.data)
+        
+
+
+    }
+
+    useEffect(() => {
+      
+    getService()
+      
+    }, [])
+    
     const submitHandler = async (data) => {
 
         console.log("data",data)
@@ -35,6 +52,16 @@ export const FileUploadDemo = () => {
                 </div>
 
             </form>
+            {
+                services.map((service) => {
+                    return (
+                        <div key={service._id}>
+                            <h1>{service.name}</h1>
+                            <img src={service.imageUrl}></img>
+                        </div>
+                    )
+                })
+            }
     </div>
   )
 }

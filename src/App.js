@@ -34,6 +34,7 @@ import { DyanmicSidebar } from "./components/DyanmicSidebar";
 import { Products } from "./components/Products";
 import { BankComponent } from "./components/BankComponent";
 import { FileUploadDemo } from "./components/FileUploadDemo";
+import { HtmlToPdf } from "./components/HtmlToPdf";
 
 function App() {
   var title = "Employee Application";
@@ -84,6 +85,7 @@ function App() {
             <Route path="/updateuser/:id" element={<UpdateUser />}></Route>
             <Route path="/login" element={<LoginEmployee />}></Route>
             <Route path = "/fileupload" element = {<FileUploadDemo/>}></Route>
+            <Route path = "/htmltopdf" element = {<HtmlToPdf/>}></Route>
 
             {/* <Route path ="/*" element = {<h1>404</h1>}></Route> */}
             <Route path="/*" element={<Error404 />}></Route>

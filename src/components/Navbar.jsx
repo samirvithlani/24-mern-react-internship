@@ -100,6 +100,11 @@ export const Navbar = () => {
               </Link>
             </li>
             <li class="nav-item">
+              <Link class="nav-link" to="/htmltopdf">
+              htmltopdf
+              </Link>
+            </li>
+            <li class="nav-item">
               <Link class="nav-link" to="/login">
               login
               </Link>

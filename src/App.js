@@ -35,6 +35,8 @@ import { Products } from "./components/Products";
 import { BankComponent } from "./components/BankComponent";
 import { FileUploadDemo } from "./components/FileUploadDemo";
 import { HtmlToPdf } from "./components/HtmlToPdf";
+import { PieChartDemo } from "./components/PieChartDemo";
+import { ProductComponent } from "./components/api/ProductComponent";
 
 function App() {
   var title = "Employee Application";
@@ -86,6 +88,8 @@ function App() {
             <Route path="/login" element={<LoginEmployee />}></Route>
             <Route path = "/fileupload" element = {<FileUploadDemo/>}></Route>
             <Route path = "/htmltopdf" element = {<HtmlToPdf/>}></Route>
+            <Route path = "/piechart" element = {<PieChartDemo/>}></Route>
+            <Route path = "/prodcomp" element = {<ProductComponent/>}></Route>
 
             {/* <Route path ="/*" element = {<h1>404</h1>}></Route> */}
             <Route path="/*" element={<Error404 />}></Route>

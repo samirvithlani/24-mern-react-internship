@@ -84,8 +84,8 @@ export const Navbar = () => {
               </Link>
             </li>
             <li class="nav-item">
-              <Link class="nav-link" to="/products">
-              products
+              <Link class="nav-link" to="/prodcomp">
+              prodcomp
               </Link>
             </li>
             <li class="nav-item">
@@ -100,8 +100,8 @@ export const Navbar = () => {
               </Link>
             </li>
             <li class="nav-item">
-              <Link class="nav-link" to="/htmltopdf">
-              htmltopdf
+              <Link class="nav-link" to="/piechart">
+              piechart
               </Link>
             </li>
             <li class="nav-item">

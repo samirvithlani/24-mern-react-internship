@@ -37,6 +37,8 @@ import { FileUploadDemo } from "./components/FileUploadDemo";
 import { HtmlToPdf } from "./components/HtmlToPdf";
 import { PieChartDemo } from "./components/PieChartDemo";
 import { ProductComponent } from "./components/api/ProductComponent";
+import { DatGridDemo } from "./mui/DatGridDemo";
+import { DataGridDemo2 } from "./mui/DataGridDemo2";
 
 function App() {
   var title = "Employee Application";
@@ -90,6 +92,7 @@ function App() {
             <Route path = "/htmltopdf" element = {<HtmlToPdf/>}></Route>
             <Route path = "/piechart" element = {<PieChartDemo/>}></Route>
             <Route path = "/prodcomp" element = {<ProductComponent/>}></Route>
+            <Route path = "/muitable" element = {<DataGridDemo2/>}></Route>
 
             {/* <Route path ="/*" element = {<h1>404</h1>}></Route> */}
             <Route path="/*" element={<Error404 />}></Route>

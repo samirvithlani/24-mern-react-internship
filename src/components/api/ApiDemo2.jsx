@@ -1,9 +1,11 @@
 import axios from "axios";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const ApiDemo2 = () => {
+  const navigate = useNavigate()
   const postApiData = async () => {
     const user = {
       name: "parth",
@@ -21,9 +23,10 @@ export const ApiDemo2 = () => {
       console.log(res.data);
       if (res.status === 201) {
         //alert("Data posted successfully..");
+
         toast.error('🦄 Wow so easy!', {
             position: "top-center",
-            autoClose: 5000,
+            autoClose: 3000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -32,6 +35,10 @@ export const ApiDemo2 = () => {
             theme: "colored",
             
             });
+            setTimeout(() => {
+              navigate("/apiDemo1")  
+            }, 3200);
+            
       } else {
         alert("Data not posted..");
       }

@@ -16,7 +16,7 @@ export const ApiDemo2 = () => {
 
     try {
       const res = await axios.post(
-        "https://node5.onrender.com/user/user",
+        "/user/user",
         user
       );
       console.log(res);

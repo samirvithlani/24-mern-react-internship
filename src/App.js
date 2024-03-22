@@ -39,8 +39,15 @@ import { PieChartDemo } from "./components/PieChartDemo";
 import { ProductComponent } from "./components/api/ProductComponent";
 import { DatGridDemo } from "./mui/DatGridDemo";
 import { DataGridDemo2 } from "./mui/DataGridDemo2";
+import axios from "axios";
+import { ForgotPassword } from "./components/ForgotPassword";
+import { ResetPassword } from "./components/ResetPassword";
 
 function App() {
+
+  //axios.defaults.baseURL = "https://two4-mern-node-internship.onrender.com";
+  //axios.defaults.baseURL = "http://localhost:5000";
+
   var title = "Employee Application";
   var employee = {
     id: 1,
@@ -53,7 +60,7 @@ function App() {
 
   return (
     <body >
-      <div ></div>
+      <div className = "App"></div>
         <Navbar/>
         
           <Routes>
@@ -93,7 +100,8 @@ function App() {
             <Route path = "/piechart" element = {<PieChartDemo/>}></Route>
             <Route path = "/prodcomp" element = {<ProductComponent/>}></Route>
             <Route path = "/muitable" element = {<DataGridDemo2/>}></Route>
-
+            <Route path ="/forgotpassword" element = {<ForgotPassword/>}></Route>
+            <Route path = "/resetpassword"  element = {<ResetPassword/>}></Route>
             {/* <Route path ="/*" element = {<h1>404</h1>}></Route> */}
             <Route path="/*" element={<Error404 />}></Route>
           </Routes>

@@ -40,3 +40,43 @@ Formkik
 
 useEffect : --> lifecycle method [hook]
 :to handle side effects
+
+
+
+
+
+service ---> add useeffect() --> lat,long --->
+
+add into data...
+
+user lat long
+service lat long
+serviceprovide lat laong
+
+
+loggedin user ->lat long --> 23,25
+
+getAllSerivicesByLocation =(){
+
+	body{
+
+	lat:data.data.lat
+	long:data.data.long
+	}
+
+}
+
+
+
+forgot password:
+
+
+1)Forgotpassword component ---> email ----> post api -->db ---> check --> flag return
+flag ==1 :restpassword component ===> state email data ---> email as disable filed : --->
+
+
+email --> as disable
+password --> 
+
+submit ---> post --->
+

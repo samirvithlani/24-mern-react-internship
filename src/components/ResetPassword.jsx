@@ -18,28 +18,41 @@ export const ResetPassword = () => {
 
     //put update...
 
+    try{
     const dataToSend = {
-        email: location?.state?.email,
+        email: data.email,
         password: data.password,
+        otp: data.otp,
+        time: new Date().getTime()
         
     }
     
-    const res = await axios.post("http://localhost:4000/employees/employee/resetpassword", data);
+    const res = await axios.post("http://localhost:4000/employees/employee/resetpassword", dataToSend);
     if(res.data.flag ==1){
         alert("Password reset success")
         navigate("/")
     }
     else{
         alert("Password reset failed")
+        console.log(res.data)
         navigate("/") //login....
     }
 
+  }catch(err){
+    console.log(err)
+    alert("Password reset failed")
+    navigate("/") //login....
+  }
 
   };
   return (
     <div>
       <h1>RESET PASSWORD</h1>
       <form onSubmit={handleSubmit(submitHandler)}>
+        <div>
+          <label>OTP</label>
+          <input type="text" {...register("otp")} />
+        </div>
         <div>
           <label>Email</label>
           <input type="email" {...register("email")} disabled />
